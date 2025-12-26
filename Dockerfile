@@ -16,8 +16,7 @@ COPY src/ ./src
 
 # 3. Compila el proyecto y genera el JAR final
 # Usa -DskipTests para omitir las pruebas y acelerar la compilación
-RUN mvn clean package -DskipTests
-
+RUN mvn clean package -DskipTests -Dfile.encoding=UTF-8
 
 # ------------------------------------------------------------------------
 # FASE 2: RUNNER - Crea la imagen ligera de ejecución
